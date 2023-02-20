@@ -8,5 +8,16 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1,
     accessToken: apiKey
-}).addTo(mymap);
+}).addTo(mymap)
+
+function areaSearch() {
+    let searchMenu = document.getElementById('searchMenu')
+    const searchBar = document.createElement('input')
+    const searchButton = document.createElement('button')
+    searchBar.placeholder = 'Place'
+    searchButton.textContent = 'Search'
+
+    searchMenu.append(searchBar)
+    searchMenu.append(searchButton)
+}
 
